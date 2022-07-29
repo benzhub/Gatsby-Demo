@@ -18,9 +18,9 @@ export default function Navbar() {
         <nav>
             <h1>{ title }</h1>
             <div className="links">
-                <Link to="/">Home</Link>
-                <Link to="/about">About</Link>
-                <Link to="/projects">Portfolio Projects</Link>
+                <Link to="/Gatsby-Demo/">Home</Link>
+                <Link to="/Gatsby-Demo/about">About</Link>
+                <Link to="/Gatsby-Demo/projects">Portfolio Projects</Link>
             </div>
         </nav>
     )
