@@ -1,0 +1,20 @@
+.details h2 {
+    font-size: 3.5em;
+    margin-top: 80px;
+}
+.details h3 {
+    font-size: 2em;
+    font-weight: 400;
+    margin-bottom: 40px;
+}
+.html {
+    margin-top: 40px;
+}
+
+.html pre {
+    background-color: rgb(79, 78, 78);
+    padding: 1rem;
+}
+.featured {
+    margin-bottom: 40px;
+}
