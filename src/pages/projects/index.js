@@ -30,13 +30,12 @@ export default index;
 
 // export page query
 export const query = graphql`
-  query ProjectsPage {
-    allMarkdownRemark {
+  query MyQuery {
+    allMarkdownRemark(sort: {frontmatter: {title: ASC}}) {
       nodes {
         frontmatter {
           title
           stack
-          date
           slug
         }
         id
