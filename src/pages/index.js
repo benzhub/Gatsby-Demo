@@ -1,9 +1,12 @@
 import React from "react"
 import Layout from "../components/Layout"
 import * as styles from '../styles/home.module.css'
-import { Link } from "gatsby"
+import { Link, graphql } from "gatsby"
+import Img from 'gatsby-image'
 
-export default function Home() {
+export default function Home({data}) {
+  console.log(data.file.childImageSharp.fluid)
+  const homeImg = data.file.childImageSharp.fluid
   return (
     <Layout>  
       <section className={styles.header}>
@@ -13,8 +16,21 @@ export default function Home() {
           <p>UX designer & web developer based in Manchester .</p>
           <Link className={styles.btn} to="/projects">My Portfolio Projects</Link>
         </div>
-        <img src="./banner.png" alt="site banner" style={{ maxWidth: '100%' }}/>
+        <Img fluid={homeImg}/>
       </section>
     </Layout>
   )
 }
+
+export const query = graphql`
+query Banner {
+  file(relativePath: {eq: "banner.png"}) {
+    id
+    childImageSharp {
+      fluid {
+        ...GatsbyImageSharpFluid
+      }
+    }
+  }
+}
+`

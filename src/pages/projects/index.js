@@ -4,7 +4,6 @@ import * as styles from '../../styles/projects.module.css'
 import { graphql, Link } from 'gatsby';
 
 const index = ({data}) => {
-  console.log(data)
   const projects = data.projects.nodes
   const contactInfo = data.contact.siteMetadata.contact
   return (
